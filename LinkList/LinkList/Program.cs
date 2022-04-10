@@ -1,6 +1,4 @@
-﻿
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,15 +8,19 @@ namespace Linked_List
 {
     class Program
     {
+
         static void Main(string[] args)
         {
             Linked_List<int> mylist = new Linked_List<int>();
 
             mylist.Add(56);
+            mylist.Add(30);
             mylist.Add(70);
             mylist.Display();
             Console.WriteLine("-------------------------");
-            mylist.InsertAtParticularPosition(1, 30);
+
+            Console.WriteLine("Popping first Element in List");
+            mylist.PoP_First_element();
             mylist.Display();
         }
     }
