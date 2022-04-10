@@ -77,18 +77,25 @@ namespace Linked_List
             prev.next = newestNode;
             return this.head;
         }
-        internal Node<Gtype> PoP_First_element()
+
+        public Node<Gtype> PoP_Last_element()
         {
             if (this.head == null)
             {
                 return null;
             }
-            this.head = this.head.next;
-            return this.head;
+            if (head.next == null)
+            {
+                return null;
+            }
+            Node<Gtype> newNode = head;
+            while (newNode.next.next != null)
+            {
+                newNode = newNode.next;
+            }
+            newNode.next = null;
+            return head;
         }
 
     }
-
-
-
 }
