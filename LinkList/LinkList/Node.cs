@@ -8,6 +8,7 @@ namespace Linked_List
 {
     internal class Node<Gtype>
     {
+
         public Gtype val;
         public Node<Gtype> next;
 
